@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Oliveira Auto Center</title>
+
+  <!-- Fontes e Ícones -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contato.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container header-flex">
+      <div class="logo">
+        <h1>OLIVEIRA <span>AUTO CENTER</span></h1>
+      </div>
+      <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre Nós</a></li>
+          <li><a href="contato.html" class="active"><i class="fas fa-envelope"></i> Contato</a></li>
+          <li><a href="trabalhe-conosco.html"><i class="fas fa-briefcase"></i> Trabalhe Conosco</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Formulário de Contato -->
+  <main class="container">
+    <h2>Entre em Contato</h2>
+    <form id="form-contato">
+
+      <!-- Campos principais -->
+      <label for="nome">Nome Completo*</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="telefone">Telefone*</label>
+      <input type="tel" id="telefone" name="telefone" required />
+
+      <label for="email">E-mail*</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="tipo">Tipo de Plano*</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Selecione</option>
+        <option value="empresa">Plano Empresa</option>
+        <option value="individual">Plano Individual</option>
+      </select>
+
+      <!-- Campos Empresa -->
+      <div id="campos-empresa" class="campos-dinamicos">
+        <fieldset>
+          <legend>Informações da Empresa</legend>
+
+          <label for="empresa">Nome da Empresa*</label>
+          <input type="text" id="empresa" name="empresa" />
+
+          <label for="endereco-empresa">Endereço*</label>
+          <input type="text" id="endereco-empresa" name="endereco_empresa" />
+
+          <label for="numero-empresa">Número*</label>
+          <input type="text" id="numero-empresa" name="numero_empresa" />
+
+          <label for="cep-empresa">CEP*</label>
+          <input type="text" id="cep-empresa" name="cep_empresa" />
+
+          <label for="cnpj">CNPJ*</label>
+          <input type="text" id="cnpj" name="cnpj" />
+
+          <label for="tipo-endereco-empresa">Tipo de Endereço*</label>
+          <select id="tipo-endereco-empresa" name="tipo_endereco_empresa">
+            <option value="">Selecione</option>
+            <option>Casa</option>
+            <option>Casa de Condomínio</option>
+            <option>Edifício Comercial</option>
+            <option>Galpão Comercial</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dados do Veículo da Empresa</legend>
+
+          <label for="marca-empresa">Marca do Carro*</label>
+          <select id="marca-empresa" name="marca_empresa">
+            <option value="">Selecione a marca</option>
+            <!-- Opções preenchidas via JS -->
+          </select>
+
+          <label for="modelo-empresa">Modelo do Carro*</label>
+          <select id="modelo-empresa" name="modelo_empresa" disabled>
+            <option value="">Selecione a marca primeiro</option>
+          </select>
+
+          <label for="ano-empresa">Ano do Carro*</label>
+          <select id="ano-empresa" name="ano_empresa" disabled>
+            <option value="">Selecione o modelo primeiro</option>
+          </select>
+
+          <label for="cor-empresa">Cor do Carro*</label>
+          <input type="text" id="cor-empresa" name="cor_empresa" placeholder="Ex: Prata, Preto, Branco..." />
+        </fieldset>
+      </div>
+
+      <!-- Campos Individual -->
+      <div id="campos-individual" class="campos-dinamicos">
+        <fieldset>
+          <legend>Endereço</legend>
+
+          <label for="endereco">Endereço*</label>
+          <input type="text" id="endereco" name="endereco" />
+
+          <label for="numero">Número*</label>
+          <input type="text" id="numero" name="numero" />
+
+          <label for="cep">CEP*</label>
+          <input type="text" id="cep" name="cep" />
+
+          <label for="cpf">CPF*</label>
+          <input type="text" id="cpf" name="cpf" />
+
+          <label for="tipo-endereco">Tipo de Endereço*</label>
+          <select id="tipo-endereco" name="tipo_endereco">
+            <option value="">Selecione</option>
+            <option>Casa</option>
+            <option>Casa de Condomínio</option>
+            <option>Apartamento</option>
+            <option>Endereço Comercial</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dados do Carro</legend>
+
+          <label for="marca">Marca do Carro*</label>
+          <select id="marca" name="marca">
+            <option value="">Selecione a marca</option>
+            <!-- Opções preenchidas via JS -->
+          </select>
+
+          <label for="modelo">Modelo do Carro*</label>
+          <select id="modelo" name="modelo" disabled>
+            <option value="">Selecione a marca primeiro</option>
+          </select>
+
+          <label for="ano">Ano do Carro*</label>
+          <select id="ano" name="ano" disabled>
+            <option value="">Selecione o modelo primeiro</option>
+          </select>
+
+          <label for="cor">Cor do Carro*</label>
+          <input type="text" id="cor" name="cor" placeholder="Ex: Preto, Prata, Vermelho..." />
+        </fieldset>
+      </div>
+
+      <!-- Botão -->
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <h3>OLIVEIRA <span>AUTO CENTER</span></h3>
+        <p>Excelência em serviços automotivos desde 2005</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5519974062262" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Oliveira Auto Center - Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal de Sucesso -->
+<div class="modal-sucesso hidden" id="modal-sucesso">
+  <div class="modal-conteudo">
+    <i class="fas fa-check-circle"></i>
+    <p>Formulário enviado com sucesso!</p>
+    <button id="btn-voltar">Voltar à Página</button>
+  </div>
+</div>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5519974062262" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contato via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Overlay para menu mobile -->
+  <div class="menu-overlay"></div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/vanilla-masker/build/vanilla-masker.min.js"></script>
+  <script src="js/contato.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
