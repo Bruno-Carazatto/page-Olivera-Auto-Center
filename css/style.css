@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.5px;
 }
 
+a{
+  text-decoration: none;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -496,5 +500,30 @@ footer {
 
   .leva-traz {
     padding: 40px 20px;
+  }
+}
+
+/* Ajuste do mapa no responsivo */
+@media (max-width: 768px) {
+  .contato-mapa iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .contato-info,
+  .contato-mapa {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-info p {
+    font-size: 0.9rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contato-info a {
+    word-break: break-word;
   }
 }
