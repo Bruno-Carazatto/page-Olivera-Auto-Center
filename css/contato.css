@@ -265,8 +265,8 @@ footer {
 @media (max-width: 768px) {
   .header-flex {
     flex-direction: column;
-    align-items: flex-start;
-  }
+    align-items: center; /* <- alterado de flex-start para center */
+}
 
   .menu ul {
     flex-direction: column;
